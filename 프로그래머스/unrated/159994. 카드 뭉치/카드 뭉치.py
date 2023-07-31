@@ -1,13 +1,9 @@
 def solution(cards1, cards2, goal):
     answer = 'Yes'
     for i in goal:
-        if i in cards1:
-            if cards1.index(i)!=0:
-                return "No"
+        if len(cards1)>0 and i == cards1[0]:
             cards1.remove(i)
-        elif i in cards2:
-            if cards2.index(i)!=0:
-                return "No"
+        elif len(cards2)>0 and i == cards2[0]:
             cards2.remove(i)
         else:
             return "No"
